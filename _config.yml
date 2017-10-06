@@ -1,3 +1,5 @@
 theme: jekyll-theme-minimal
 
 title: Introduction to Statistical Learning Theory
+
+baseurl: /intro-slt
