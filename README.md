@@ -30,7 +30,7 @@ Final grades will depend on *one* project assignment (50%) and a final exam (50%
 
 **Class** | **Date** | **Topic**
  :---: | :--- | :---
-1 | Fri Oct 06 | Course Overview
+1 | Fri Oct 06 | [Course Overview](https://github.com/cciliber/intro-slt/blob/master/slides/lec1.pdf)
 2 | Fri Oct 13 | Overfitting and Regularization
 3 | **Wed Oct 18** | Tikhonov Regularization 
 4 | Fri Oct 20 | Computational Regularization I: Iterative Regularization
