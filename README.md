@@ -9,6 +9,7 @@ This course represents half of [Advanced Topics in Machine Learning](http://www.
 
 The other half is [Reproducing kernel Hilbert spaces in Machine Learning](http://www.gatsby.ucl.ac.uk/~gretton/coursefiles/rkhscourse.html) (Taught by Prof. [Arthur Gretton](http://www.gatsby.ucl.ac.uk/~gretton/)).
 
+Course announcements will be posted on the [mailing list](https://groups.google.com/forum/?fromgroups#!forum/csml-advanced-topics).
 
 ## Course Description
 
