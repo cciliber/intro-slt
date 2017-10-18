@@ -32,14 +32,14 @@ Final grades will depend on *one* project assignment (50%) and a final exam (50%
 **Class** | **Date** | **Topic**
  :---: | :--- | :---
 1 | Fri Oct 06 | [Course Overview](/intro-slt/slides/lec1.pdf)
-2 | Fri Oct 13 | [Overfitting and Regularization](/intro-slt/slides/lec2.pdf)
-3 | **Wed Oct 18** | Tikhonov Regularization 
-4 | Fri Oct 20 | Computational Regularization I: Iterative Regularization
-5 | Fri Nov 03 | Computational Regularization II: Sampling
-6 | Fri Nov 10 | Generalization Error and Stability
-7 | Fri Nov 17 | Model Selection
-8 | Fri Nov 24 | Notes on the Approximation Error
-9 | TBA | Going further with Regularization
+2 | Fri Oct 13 | [Overfitting and Regularization I](/intro-slt/slides/lec2-3.pdf)
+3 | Wed Oct 18 | [Overfitting and Regularization II](/intro-slt/slides/lec2-3.pdf)
+4 | Fri Oct 20 | Tikhonov Regularization 
+5 | Fri Nov 03 | Computational Regularization I: Iterative Regularization
+6 | Fri Nov 10 | Computational Regularization II: Sampling
+7 | Fri Nov 17 | Generalization Error and Stability
+8 | Fri Nov 24 | Model Selection
+9 | TBA | Notes on the Approximation Error
 10 | TBA | Structured Prediction 
 
 ## Reading List
