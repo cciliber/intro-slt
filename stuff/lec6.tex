@@ -1,0 +1,402 @@
+\documentclass[10pt,mathserif]{beamer}
+
+\usepackage{graphicx,amsmath,amssymb,tikz,psfrag}
+
+\usepackage{mathtools}
+
+\input defs.tex
+
+%% formatting
+
+\mode<presentation>
+{
+\usetheme{default}
+}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme[rgb={0.13,0.28,0.59}]{structure}
+\setbeamertemplate{itemize subitem}{--}
+\setbeamertemplate{frametitle} {
+    \begin{center}
+      {\large\bf \insertframetitle}
+    \end{center}
+}
+
+
+
+\newcommand\footlineon{
+%  \setbeamertemplate{footline} {
+%    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.8cm,rightskip=.6cm]{structure}
+%      \footnotesize \insertsection
+%      \hfill
+%      {\insertframenumber}
+%    \end{beamercolorbox}
+%    \vskip 0.45cm
+%  }
+  \setbeamertemplate{footline}[text line]{%
+      % \parbox{\linewidth}{\vspace*{-8pt}\hfill}
+  }
+\setbeamertemplate{navigation symbols}{}
+
+}
+\footlineon
+
+%\AtBeginSection[] 
+%{ 
+%   \begin{frame}<beamer> 
+%       \frametitle{Outline} 
+%       \tableofcontents[currentsection,currentsubsection] 
+%   \end{frame} 
+%} 
+
+%% begin presentation
+
+\title{\large \bfseries \\ Class 6 \\ Early Stopping}
+
+\author{Carlo Ciliberto\\
+Department of Computer Science, UCL}
+
+\date{\today}
+
+\begin{document}
+
+\frame{
+\thispagestyle{empty}
+\titlepage
+}
+
+
+
+\begin{frame}{Characterization of Convexity}
+
+{\bf Lemma}. $F:\hh\to\R$ differentiable. Then the following statements are equivalent
+
+\begin{itemize}
+  \item[(i)] $F$ is convex
+  \item[(ii)] $F(w) - F(v) \geq \langle \nabla F(v), w - v\rangle_\hh \qquad \forall w,v\in\hh$
+  \item[(iii)] $\langle \nabla F(w) - \nabla F(v), w - v\rangle_\hh \geq 0 \qquad \forall w,v\in\hh$
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Characterization of Convexity (i) $\Rightarrow$ (ii)}
+
+Assume (i). By convexity, for every $\theta \in(0,1]$ 
+$$
+  F(v + \theta (w-v) ) \leq F(\theta w + (1-\theta) v) \leq \theta F(w) + (1-\theta) F(v)
+$$
+Therefore, by bringing $F(v)$ on the left side and dividing with respect to $\theta$, we have
+
+$$
+  \frac{F(v + \theta (w-v) ) - F(v)}{\theta} \leq  F(w) - F(v)
+$$
+
+By sending $\theta\to 0$ we have
+$$
+\lim_{\theta\to0} \frac{F(v + \theta (w-v) ) - F(v)}{\theta} = \langle\nabla F(v), w - v\rangle_\hh\leq F(w) - F(v)
+$$
+as desired.
+
+\end{frame}
+
+
+
+\begin{frame}{Characterization of Convexity (ii) $\Rightarrow$ (iii)}
+
+By $(ii)$, for any $w,v\in\hh$ we have 
+\bi
+\item $F(w) - F(v) \geq \langle \nabla F(v), w - v\rangle_\hh$
+\item $F(v) - F(w) \geq \langle \nabla F(w), v - w\rangle_\hh = - \langle \nabla F(w), w - v\rangle_\hh$
+\ei
+
+\vfill
+By summing the two inequalities we have
+
+$$
+0 \geq \langle \nabla F(v) - F(w) , w - v\rangle_\hh
+$$
+Or equivalently 
+
+$$
+\langle \nabla F(v) - F(w) , v - w\rangle_\hh \geq 0
+$$
+
+as desired. 
+
+\end{frame}
+
+\begin{frame}{Characterization of Convexity (iii) $\Rightarrow$ (i)}
+
+Assume (iii). Define $\phi:[0,1]\to\R$, $\phi(\theta) = F(v + \theta(w-v))$. Then 
+$$
+\phi'(\theta) = \langle\nabla F(v + \theta(w-v)),w - v\rangle_\hh.
+$$
+
+For any $0\leq\alpha<\beta\leq1$, let $v_\alpha = v + \alpha(w-v)$ and  $v_\beta = v + \beta(w-v)$. Then,
+\begin{align*}
+\phi'(\beta) - \phi'(\alpha) & = \langle\nabla F(v_\beta) - \nabla(v_\alpha),w - v\rangle_\hh \\
+                             & = \frac{1}{\beta-\alpha} \langle\nabla F(v_\beta) - \nabla(v_\alpha),v_\beta - v_\alpha\rangle_\hh \geq 0
+\end{align*}
+%
+where the last inequality is a consequence of (iii).
+
+\vfill
+
+This implies that $\phi'$ is a non-decreasing function on $[0,1]$.
+\end{frame}
+
+\begin{frame}{Characterization of Convexity (iii) $\Rightarrow$ (i) (Continued)}
+
+{\bf Lemma}. Let $\phi:[0,1]\to\R$ differentiable with $\phi'$ non-decreasing. Then $\phi$ is convex. 
+
+\ \\
+
+{\bf Proof}. Let $x,z\in[0,1]$. For $\theta\in[0,1]$ define
+$$
+\psi(z) = \theta\phi(x) + (1-\theta)\psi(z) - \psi(\theta x + (1-\theta)z)
+$$
+
+Then
+
+$$
+\psi'(z) = (1-\theta) (\psi(z) - \psi(\theta x + (1-\theta) z)
+$$
+
+Since $\phi'$ is non-decreasing we have that for $z\leq x$, $\psi'(z)\leq0$ while for $z\geq x$, $\psi'(z)\geq0$. Therefore the function $\psi$ has a minimum in $z = x$. 
+
+\ \\
+
+By construction, $\psi(x) = 0$ and therefore, for any $y\in[0,1]$ we have $\psi(y)\geq\psi(x) = 0$, which implies the convexity of $\phi$ as desired.
+
+\end{frame}
+
+\begin{frame}{Characterization of Convexity (iii) $\Rightarrow$ (i) (Continued)}
+
+We have shown that (iii) implies $\phi(\theta) = F(v + \theta(w-v))$ convex. In particular, by writing $\theta = \theta \cdot 1 + (1-\theta) \cdot 0$, we have
+
+
+\begin{align*}
+F(v + \theta(w-v)) = \phi(\theta) \leq \theta\phi(1) + (1-\theta) \phi(0) = \theta F(w) + (1-\theta) F(v)
+\end{align*}
+%
+which proves the convexity of $F$ as desired
+
+
+\end{frame}
+
+
+
+\begin{frame}{Quadratic Upper Bound}
+
+{\bf Lemma}. $F:\hh\to\R$ convex $M$-smooth. The function $G:\hh\to\R$
+$$
+G(w) = \frac{M}{2}\|w\|^2 - F(w)
+$$
+is convex.  
+
+\vfill
+
+{\bf Proof}. By the $M$-smoothness of $F$ combined with Cauchy-Swartz inequality, we have
+{
+\footnotesize
+$$
+\langle \nabla F(w) - \nabla F(v), w - v\rangle_\hh \leq \|\nabla F(w) - \nabla F(v)\|_\hh \| w - v\|_\hh \leq M\|w - v\|_\hh^2
+$$
+}
+
+Then, since $\nabla G(w) = M w - \nabla F(w)$, we have $\forall w,v\in\hh$
+
+{
+  \footnotesize
+\begin{align*}
+\langle \nabla G(w) - \nabla G(v), w - v\rangle_\hh & = \langle M(w - v) - \nabla F(v) + \nabla F(w) , w - v\rangle_\hh \\
+  & = M\|w - v\|_\hh^2 - \langle \nabla F(w) - \nabla F(v), w - v\rangle_\hh \geq 0
+\end{align*}
+}
+
+which implies the convexity of $G$ as desired. 
+
+\end{frame}
+
+\begin{frame}{Consequence of Quadratic Upper Bound}
+
+
+{\bf Lemma}. $F:\hh\to\R$ convex $M$-smooth with minimizer $w_*\in\hh$. Then 
+$$
+  F(w) - F(w_*)\geq \frac{1}{2}\|\nabla F(w)\|_\hh^2 \qquad \forall w\in\hh
+$$
+
+{\bf Proof}. From a previous class (Lec $4$) we know that for any $v,w\in\hh$ 
+{\footnotesize
+$$
+F(v) \leq F(w) + \langle \nabla F(w), v - w\rangle_\hh + \frac{L}{2}\|w - v\|_\hh^2
+$$
+}
+By minimizing the left and right sides w.r.t. $v\in\hh$, we have
+%
+{
+\footnotesize
+\begin{align*}
+F(w_*) &  \leq \inf_{v\in\hh} F(w) + \langle \nabla F(w), v - w\rangle_\hh + \frac{L}{2}\|w - v\|_\hh^2 \\ & = F(w) - \frac{1}{2L}\|\nabla F(w)\|_\hh^2
+\end{align*}
+}
+
+Which yields the desired result. (Note that the minimizer of the quadratic upper bound is indeed given by $v = w - \frac{1}{L}\nabla F(w)$).
+\end{frame}
+
+
+\begin{frame}{Co-coercivity of the Gradient}
+
+{\bf Proposition}. $F:\hh\to\R$ convex $M$-smooth. Then $\forall v,w\in\hh$
+$$
+  \langle \nabla F(w) - \nabla F(v), w - v\rangle_\hh ~\geq~ \frac{1}{M}\|\nabla F(w) - \nabla F(v)\|_\hh^2
+$$
+
+{\bf Proof}. Define
+$$
+F_w(z) = F(z) - \langle \nabla F(w),z\rangle_\hh \qquad \textrm{and} \qquad F_v(z) = F(z) - \langle \nabla F(v),z\rangle_\hh.
+$$
+%
+It is trivial to verify that $F_w$ and $F_v$ are $M$-smooth as well. 
+
+\ \\ 
+Moreover $w$ and $v$ are the minimizers of respectively $F_w$ and $F_v$ since
+$$
+\nabla F_w(z) = \nabla F(z) - \nabla F(w) = 0 ~ \Longleftrightarrow ~ z = w.
+$$
+
+Therefore we can apply the previous Lemma. 
+
+\end{frame}
+
+\begin{frame}{Co-coercivity of the Gradient (Continued)}
+
+By applying the Lemma we have 
+\vfill
+\bi
+  \item $\frac{1}{2M}\|\nabla F_w(v)\|_\hh^2 \leq F_w(v) - F_w(w) = F(v) - F(w) - \langle \nabla F(w),v-w\rangle_\hh $
+  \vfill
+  \item $\frac{1}{2M}\|\nabla F_v(w)\|_\hh^2 \leq F_v(w) - F_v(v) = F(w) - F(v) - \langle \nabla F(v),w-v\rangle_\hh $
+\ei
+\vfill
+
+Since $\|\nabla F_w(v)\|_\hh = \|\nabla F_v(w)\|_\hh = \|\nabla F(w) - \nabla F(w)\|_\hh$, by summing the two inequalities we have 
+
+$$
+\frac{1}{M}\|\nabla F(w) - \nabla F(w)\|_\hh^2 \leq \langle \nabla F(v) - \nabla F(w), v- w\rangle_\hh
+$$
+\ \\
+as desired.
+
+\end{frame}
+
+
+\begin{frame}{Gradient Descent is Non-expansive}
+
+{\bf Theorem}. $\ell:\hh\to\R$ convex, differentiable and $M$-smooth. Let $0\geq\gamma\geq 2/L$ and $G:\hh\to\hh$ be the gradient step operator $G(f) = f - \gamma \nabla \ell(f)$ for $f\in\hh$. Then 
+
+$$
+  \|G(f) - G(g)\|_\hh \leq \|f - g\|_\hh
+$$
+
+{\bf Proof}. By applying the co-coercivity of a convex $M$-smooth loss, we have
+
+{
+\footnotesize
+\begin{align*}
+  \|G(f) - G(g)\|_\hh^2 & = \|f - \gamma \nabla \ell(f) - g + \gamma \nabla \ell(g)\|_\hh^2\\ 
+                        & = \|f - g\|_\hh^2 - 2\gamma\langle\nabla\ell(f)-\nabla\ell(g),f-g\rangle_\hh + \gamma^2\|\nabla\ell(f)-\nabla\ell(g)\|_\hh^2 \\
+                        & \leq \|f - g\|_\hh^2 - \gamma(\frac{2}{M} - \gamma)\|\nabla\ell(f)-\nabla\ell(g)\|_\hh^2 \\
+                        & \leq \|f - g\|_\hh^2
+\end{align*}
+}
+\ \\
+since $\gamma(\frac{2}{M}-\gamma)\leq1$ for $\gamma \in[0,2/L]$. This implies the desired result. 
+
+
+\end{frame}
+
+
+
+\begin{frame}{Stability of Gradient Descent}
+
+{\bf Theorem}. Let $\ell(\cdot,y):\hh\to\R$ be convex, $L$-Lipschitz and $M$-smooth uniformly for $y\in\Y$. For any $S\in\mathcal Z^n$, let $f_T$ be the estimator produced by performing $T$ steps of gradient descent with steps-size $\gamma = 1/M$ on the dataset $S$ with loss $\ell$ starting from $0\in\hh$. This algorithm is $\beta(n,T)$ stable with 
+$$
+\beta(n,T) \leq \frac{2L^2k^2}{M} \frac{T}{n}
+$$ 
+
+{\bf Proof}. For any $S\in\mathcal Z^n$, $z\in\mathcal Z$ and $i=1,\dots,n$ let us denote $f_T$ the $T$-th iterate of gradient descent with step $\gamma$ on $S$. Denote with $f_T'\in\hh$ the $T$-th iterate of gradient descent with step $\gamma$ on $S^{i,z}$. We want to control
+
+$$
+\sup_{\bar z\in\mathcal Z} ~ |\ell(f_T,\bar z) - \ell(f_T',\bar z)| \leq Lk\|f_T - f_T'\|_\hh
+$$ 
+
+ % Let $f_$Let $(f_k)_{k\in\N}$ and $(f_k')_{k\in\N}$ be the sequence produced by gradient descent from
+
+\end{frame}
+
+\begin{frame}{Stability of Gradient Descent (Continued)}
+
+For any $t\in\N$, by construction $f_{t+1} = f_t - \gamma \nabla\risk_{S}(f_t)$ and $f_{t+1}' = f_t - \gamma \nabla\risk_{S^{i,z}}(f_t')$. Therefore 
+
+{\scriptsize
+\begin{align*}
+\|f_{t+1} - f_{t+1}'\|_\hh & = \left\|f_t - f_t' - \frac{\gamma}{n} \sum_{j\neq i} \left[ \nabla\ell(f_t,z_j) - \nabla\ell(f_t',z_j) \right] - \frac{\gamma}{n} \left[\nabla\ell(f_t,z_i) - \nabla\ell(f_t',z)\right]\right\|_\hh \\ 
+  & \leq \frac{1}{n} \sum_{j\neq i} \left\|f_t - \gamma\nabla\ell(f_t,z_j) - f_t' + \gamma\nabla\ell(f_t',z_j)\right\|_\hh \\
+  & ~~~~ + \frac{1}{n} \|f_t - f_t'\|_\hh + \frac{\gamma}{n} (\|\nabla\ell(f_t,z_i)\|_\hh + \|\nabla\ell(f_t',z)\|_\hh) \\
+\end{align*}
+}
+
+Recall that for $\gamma\in[0,2/M]$, the gradient descent step $f - \gamma\nabla\ell(f,z)$ is non-expansive for any $f \in\hh$ and $z\in\calZ$. Therefore, for any $j\neq i$,
+
+\ \\
+{
+\footnotesize
+$$
+\left\|f_t - \gamma\nabla\ell(f_t,z_j) - f_t' + \gamma\nabla\ell(f_t',z_j)\right\|_\hh\leq \|f_t - f_t'\|_\hh
+$$
+}
+\vfill
+\end{frame}
+
+\begin{frame}{Stability of Gradient Descent (Continued)}
+
+For the remaining terms, note that since $\ell$ is Lipschitz
+$$
+\|\nabla\ell(f_t,z_j)\|\leq Lk \qquad \textrm{and} \qquad \|\nabla\ell(f_t',z)\|\leq Lk
+$$
+
+(Proof.) for any $F:\hh\to\R$ convex differentiable $L$-Lipschitz,  
+
+
+{
+\footnotesize
+\begin{align*}
+\|\nabla F(w)\|_\hh & = \sup_{\|v\|_\hh\leq} ~\langle \nabla F(w),v\rangle_\hh = \sup_{\|v\|_\hh\leq 1} \lim_{t\to0} \frac{F(w + tv)- F(w)}{t} \\
+&  \leq \sup_{\|v\|_\hh\leq} \frac{L}{t}\|w + tv - w\|_\hh = \sup_{\|v\|_\hh\leq} L \|v\|_\hh = L
+\end{align*}
+}
+
+
+\end{frame}
+
+
+\begin{frame}{Stability of Gradient Descent (Continued)}
+
+Going back to $\|f_{t+1} - f_{t+1}'\|_\hh$ we have
+
+$$
+\|f_{t+1} - f_{t+1}'\|_\hh \leq \|f_t - f_t'\|_\hh + \frac{2Lk}{n}\gamma = \frac{2Lk}{M}\frac{t+1}{n}
+$$
+
+\vfill
+Therefore, iterating on all $t=1,\dots,T$, we have 
+$$
+\sup_{\bar z\in\mathcal Z} ~ |\ell(f_T,\bar z) - \ell(f_T',\bar z)| \leq \frac{2L^2k^2}{M} \frac{T}{n}
+$$
+
+as desired
+\end{frame}
+
+\end{document}
+
+
