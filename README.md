@@ -4,6 +4,7 @@
 **TAs**: Stephen Pasteris <br>
 **Office Hours**:	Thursdays 14:00 - 15:00. 3rd floor Hub, [66 Gower street](https://goo.gl/maps/n1hb1BV2erR2)<br>
 **Email Contact** :	cciliber (a) gmail.com, stephen.pasteris (a) gmail.com <br>
+**News!** The assignment is out! Check it out on [Moodle](https://moodle.ucl.ac.uk). **Due Date: 5 Jan 2018**. 
 
 This course represents half of [Advanced Topics in Machine Learning](http://www.cs.ucl.ac.uk/current_students/syllabus/compgi/compgi13_advanced_topics_in_machine_learning/) (aka COMP GI13 / COMP M050) from the [UCL CS MSc on Machine Learning](http://www.cs.ucl.ac.uk/prospective_students/msc_machine_learning/). 
 
@@ -26,6 +27,7 @@ Linear Algebra, Probability Theory, Calculus.
 ## Grading
 
 Final grades will depend on *one* project assignment (50%) and a final exam (50%). 
+The assignment can be accessed from [Moodle](https://moodle.ucl.ac.uk). **Due Date: 5 Jan 2018**. 
 
 ## Syllabus
 
@@ -36,11 +38,11 @@ Final grades will depend on *one* project assignment (50%) and a final exam (50%
 3 | Wed Oct 18 | [Overfitting and Regularization II](/intro-slt/slides/lec2-3.pdf)
 4 | Fri Oct 20 | [Tikhonov Regularization](/intro-slt/slides/lec4.pdf)
 5 | Fri Nov 03 | [Generalization Error and Stability](/intro-slt/slides/lec5.pdf)
-6 | Fri Nov 10 | Computational Regularization I: Iterative Regularization
-7 | Fri Nov 17 | Computational Regularization II: Sampling
-8 | Fri Nov 24 | Model Selection
-9 | Wed Nov 29 | Notes on the Approximation Error
-10 | Fri Dec 17| Structured Prediction 
+6 | Fri Nov 10 | Computational Regularization via Early Stopping I
+7 | Wed Nov 22 | Computational Regularization via Early Stopping II
+8 | Fri Nov 24 | Large Scale Learning and Random Projection Methods
+9 | Wed Nov 29 | Structured Prediction I
+10 | Fri Dec 15| Structured Prediction II
 
 ## Reading List
 
