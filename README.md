@@ -1,10 +1,9 @@
 **Class Times**:	Fridays 14:00 - 15:30 (Sometimes Wednesdays 11:30 - 13:00 see [syllabus](#syllabus)). <br>
-**Location**:	Ground floor lecture theater, Gatsby Computational Neuroscience Unit, Sainsbury Wellcome Centre, [25 Howland Street](https://goo.gl/maps/ew5v5F6F7bF2). <br>
+**Location**:	Ground Floor Lecture Theater, Wilkins Building, Gower St,London WC1E 6HJ. <br>
 **Instructor**:	[Carlo Ciliberto](https://cciliber.github.io) <br>
-**TAs**: Stephen Pasteris <br>
+**TAs**: Giulia Luise <br>
 **Office Hours**:	Thursdays 14:00 - 15:00. 3rd floor Hub, [66 Gower street](https://goo.gl/maps/n1hb1BV2erR2)<br>
-**Email Contact** :	cciliber (a) gmail.com, stephen.pasteris (a) gmail.com <br>
-**News!** The assignment is out! Check it out on [Moodle](https://moodle.ucl.ac.uk). **Due Date: 5 Jan 2018**. 
+**Email Contact** :	cciliber (a) gmail.com, g.luise.16 (a) ucl.ac.uk <br>
 
 This course represents half of [Advanced Topics in Machine Learning](http://www.cs.ucl.ac.uk/current_students/syllabus/compgi/compgi13_advanced_topics_in_machine_learning/) (aka COMP GI13 / COMP M050) from the [UCL CS MSc on Machine Learning](http://www.cs.ucl.ac.uk/prospective_students/msc_machine_learning/). 
 
@@ -27,7 +26,6 @@ Linear Algebra, Probability Theory, Calculus.
 ## Grading
 
 Final grades will depend on *one* project assignment (50%) and a final exam (50%). 
-The assignment can be accessed from [Moodle](https://moodle.ucl.ac.uk). **Due Date: 5 Jan 2018**. 
 
 ## Syllabus
 
