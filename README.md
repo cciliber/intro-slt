@@ -1,6 +1,6 @@
 **Class Times**:	Fridays 14:00 - 15:30 (Sometimes Wednesdays 11:30 - 13:00 see [syllabus](#syllabus)). <br>
 **Location**:	Ground floor lecture theater, Gatsby Computational Neuroscience Unit, Sainsbury Wellcome Centre, [25 Howland Street](https://goo.gl/maps/ew5v5F6F7bF2). <br>
-**Instructor**:	Carlo Ciliberto <br>
+**Instructor**:	[Carlo Ciliberto](https://cciliber.github.io) <br>
 **TAs**: Stephen Pasteris <br>
 **Office Hours**:	Thursdays 14:00 - 15:00. 3rd floor Hub, [66 Gower street](https://goo.gl/maps/n1hb1BV2erR2)<br>
 **Email Contact** :	cciliber (a) gmail.com, stephen.pasteris (a) gmail.com <br>
