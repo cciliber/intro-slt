@@ -34,12 +34,12 @@ Final grades will depend on *two* project assignment (50%) and a final exam (50%
 1 | Fri Oct 05 | [Course Overview](/intro-slt/slides/lec1.pdf)
 2 | Fri Oct 12 | [Overfitting and Regularization I](/intro-slt/slides/lec2-3.pdf)
 3 | Fri Oct 19 | [Overfitting and Regularization II](/intro-slt/slides/lec2-3.pdf)
-4 | Fri Oct 26 | [Tikhonov Regularization](/intro-slt/slides/lec4.pdf)
+4 | Wed Oct 24 | [Tikhonov Regularization](/intro-slt/slides/lec4.pdf)
 5 | Fri Nov 02 | [Generalization Error and Stability](/intro-slt/slides/lec5.pdf)
 6 | Fri Nov 09 | Computational Regularization via Early Stopping I
 7 | Fri Nov 16 | Computational Regularization via Early Stopping II
 8 | Fri Nov 23 | Large Scale Learning and Random Projection Methods
-9 | Fri Nov 30 | Structured Prediction I
+9 | Wed Nov 28 | Structured Prediction I
 10 | Fri Dec 14| Structured Prediction II
 
 ## Reading List
