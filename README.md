@@ -1,3 +1,5 @@
+**!!  Friday Nov 9th Classe will take place at Gatsby (ground floor lecture theater) 15:00-16:30 !!**
+
 **Class Times**:	Fridays 14:00 - 15:30 (Sometimes Wednesdays 11:30 - 13:00 see [syllabus](#syllabus)). <br>
 **Location**:	Ground Floor Lecture Theater, Wilkins Building, Gower St,London WC1E 6HJ. <br>
 **Instructor**:	[Carlo Ciliberto](https://cciliber.github.io) <br>
@@ -36,9 +38,9 @@ Final grades will depend on *two* project assignment (50%) and a final exam (50%
 3 | Fri Oct 19 | [Overfitting and Regularization II](/intro-slt/slides/lec2-3.pdf)
 4 | Wed Oct 24 | [Tikhonov Regularization](/intro-slt/slides/lec4.pdf)
 5 | Fri Nov 02 | [Generalization Error and Stability](/intro-slt/slides/lec5.pdf)
-6 | Fri Nov 09 | Computational Regularization via Early Stopping I
+6 | Fri Nov 09 | Least-Squares Regression
 7 | Fri Nov 16 | Computational Regularization via Early Stopping II
-8 | Fri Nov 23 | Large Scale Learning and Random Projection Methods
+8 | Fri Nov 23 | Computational Regularization via Early Stopping II
 9 | Wed Nov 28 | Structured Prediction I
 10 | Fri Dec 14| Structured Prediction II
 
