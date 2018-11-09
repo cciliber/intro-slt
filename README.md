@@ -1,5 +1,3 @@
-**!!  Friday Nov 9th Classe will take place at Gatsby (ground floor lecture theater) 15:00-16:30 !!**
-
 **Class Times**:	Fridays 14:00 - 15:30 (Sometimes Wednesdays 11:30 - 13:00 see [syllabus](#syllabus)). <br>
 **Location**:	Ground Floor Lecture Theater, Wilkins Building, Gower St,London WC1E 6HJ. <br>
 **Instructor**:	[Carlo Ciliberto](https://cciliber.github.io) <br>
@@ -51,7 +49,7 @@ There is no required text for the course. Below is a number of useful references
 - T. Poggio and L. Rosasco course [slides and videos](http://www.mit.edu/~9.520).
 - S. Shalev-Shwartz and S. Ben-David [Understanding Machine Learning: From Theory to Algorithms (Online Book)](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html). Cambridge University Press , 2014.
 - O. Bousquet, S. Boucheron and G. Lugosi [Introduction to Statistical Learning Theory (Tutorial)](http://www.kyb.mpg.de/fileadmin/user_upload/files/publications/pdfs/pdf2819.pdf).
-- P. Liang course [notes](https://web.stanford.edu/class/cs229t/Lectures/percy-notes.pdf).
+- P. Liang course [notes](https://web.stanford.edu/class/cs229t/notes.pdf).
 - N. Cristianini and J. Shawe-Taylor. Kernel Methods for Pattern Analysis . Cambridge University Press, 2004.
 - I. Steinwart and A. Christmann. [Support Vector Machines](http://www.staff.uni-bayreuth.de/~bt230781/svm.html) Springer, 2008.
 
