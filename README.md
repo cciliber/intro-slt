@@ -1,5 +1,7 @@
+**!! Location is changed: Bentham House LG26 Lecture Room !!**
+
 **Class Times**:	Fridays 14:00 - 15:30 (Sometimes Wednesdays 11:30 - 13:00 see [syllabus](#syllabus)). <br>
-**Location**:	Ground Floor Lecture Theater, Wilkins Building, Gower St,London WC1E 6HJ. <br>
+**Location**:	LG26 Lecture Room, Bentham House, WC1H 0EG ~~Ground Floor Lecture Theater, Wilkins Building~~ <br>
 **Instructor**:	[Carlo Ciliberto](https://cciliber.github.io) <br>
 **TAs**: Giulia Luise <br>
 **Office Hours**:	By appointment. 3rd floor Hub, [66 Gower street](https://goo.gl/maps/n1hb1BV2erR2)<br>
