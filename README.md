@@ -39,7 +39,7 @@ Final grades will depend on *two* project assignment (50%) and a final exam (50%
 4 | Wed Oct 24 | [Tikhonov Regularization](/intro-slt/slides/lec4.pdf)
 5 | Fri Nov 02 | [Generalization Error and Stability](/intro-slt/slides/lec5.pdf)
 6 | Fri Nov 09 | Least-Squares Regression
-7 | Fri Nov 16 | Computational Regularization via Early Stopping II
+7 | Fri Nov 16 | [Computational Regularization via Early Stopping I](/intro-slt/slides/lec7.pdf)
 8 | Fri Nov 23 | Computational Regularization via Early Stopping II
 9 | Wed Nov 28 | Structured Prediction I
 10 | Fri Dec 14| Structured Prediction II
