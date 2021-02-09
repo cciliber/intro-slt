@@ -1,4 +1,4 @@
-**!! Location is changed (Again): IALS Lecture Theater !!**
+**This Course ran in the Autumn term of 2018/2019**
 
 **Class Times**:	Fridays 14:00 - 15:30 (Sometimes Wednesdays 11:30 - 13:00 see [syllabus](#syllabus)). <br>
 **Location**:	IALS Lecture Theater ~~LG26 Lecture Room, Bentham House, WC1H 0EG, Ground Floor Lecture Theater, Wilkins Building~~ <br>
@@ -41,8 +41,8 @@ Final grades will depend on *two* project assignment (50%) and a final exam (50%
 6 | Fri Nov 09 | Least-Squares Regression
 7 | Fri Nov 16 | [Computational Regularization via Early Stopping I](/intro-slt/slides/lec7.pdf)
 8 | Fri Nov 23 | Computational Regularization via Early Stopping II
-9 | Wed Nov 28 | Structured Prediction I
-10 | Fri Dec 14| Structured Prediction II
+9 | Wed Nov 28 | [Structured Prediction I](/intro-slt/slides/lec9-10.pdf)
+10 | Fri Dec 14| [Structured Prediction II](/intro-slt/slides/lec7.pdf)
 
 ## Reading List
 
